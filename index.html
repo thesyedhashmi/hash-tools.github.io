@@ -4,104 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hash Tools - Free PDF, Excel, Image, Unit Converter & Calculator</title>
-    <meta name="description" content="50+ free tools by Hash: PDF to Word, Excel to PDF, JPG to PDF, PNG to PDF, Unit Converter, Timezone Checker, Calculator. No signup, no email, 100% free.">
-    <meta name="keywords" content="PDF to Word, Excel to PDF, JPG to PDF, PNG to PDF, unit converter, timezone checker, online calculator, free tools">
-    <meta name="author" content="Hash">
+    <meta name="description" content="Free tools by Hash: PDF to Word, Excel to PDF, JPG to PDF, PNG to PDF, Unit Converter, Timezone Checker, Calculator. No signup.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        .header {
-            text-align: center;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-        }
-
-        .tagline {
-            font-size: 1.1rem;
-            opacity: 0.95;
-        }
-
-        /* Tools Grid - 2 columns on desktop, 1 on mobile */
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 30px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .tagline { font-size: 1.1rem; opacity: 0.95; }
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             gap: 25px;
         }
-
-        /* Each Tool Card */
         .tool-card {
             background: white;
             border-radius: 20px;
             padding: 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: transform 0.3s;
         }
-
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
-        }
-
-        .tool-card h2 {
-            color: #667eea;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #e0e0e0;
-            font-size: 1.5rem;
-        }
-
-        /* Form Elements */
+        .tool-card:hover { transform: translateY(-5px); }
+        .tool-card h2 { color: #667eea; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #e0e0e0; }
         input, select, button {
             padding: 12px;
             font-size: 16px;
             margin: 8px 8px 8px 0;
             border: 1px solid #ddd;
             border-radius: 8px;
-            font-family: inherit;
         }
-
-        input {
-            flex: 1;
-            min-width: 150px;
-        }
-
         button {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             cursor: pointer;
-            transition: opacity 0.3s;
             font-weight: bold;
             padding: 12px 24px;
         }
-
-        button:hover {
-            opacity: 0.85;
-        }
-
+        button:hover { opacity: 0.85; }
         .result {
             margin-top: 15px;
             padding: 12px;
@@ -111,48 +56,45 @@
             color: #333;
             word-break: break-all;
         }
-
-        /* File input styling */
         input[type="file"] {
             background: white;
             border: 1px dashed #667eea;
             width: 100%;
             margin-bottom: 10px;
         }
-
-        .note {
-            font-size: 12px;
-            color: #999;
-            margin-top: 10px;
-            text-align: center;
-        }
-
-        footer {
-            text-align: center;
+        .working-badge {
+            background: #28a745;
             color: white;
-            margin-top: 40px;
-            padding: 20px;
-            opacity: 0.9;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-left: 10px;
         }
-
-        @media (max-width: 1100px) {
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
+        .soon-badge {
+            background: #ffc107;
+            color: #333;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-left: 10px;
         }
+        footer { text-align: center; color: white; margin-top: 40px; padding: 20px; }
+        @media (max-width: 1100px) { .tools-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 <div class="container">
     <div class="header">
         <h1>🔧 Hash Tools - All Converters</h1>
-        <div class="tagline">PDF · Excel · Image · Unit · Timezone · Calculator — 100% Free, No Signup</div>
+        <div class="tagline">JPG to PDF · PNG to PDF · Unit Converter · Timezone · Calculator — 100% Free</div>
     </div>
 
     <div class="tools-grid">
-        <!-- 1. CALCULATOR -->
+        <!-- CALCULATOR -->
         <div class="tool-card">
-            <h2>🧮 Calculator</h2>
+            <h2>🧮 Calculator <span class="working-badge">WORKING</span></h2>
             <input type="number" id="num1" placeholder="First number">
             <select id="operation">
                 <option value="add">+ Add</option>
@@ -165,110 +107,92 @@
             <div class="result" id="calcResult">Result will appear here</div>
         </div>
 
-        <!-- 2. UNIT CONVERTER -->
+        <!-- UNIT CONVERTER -->
         <div class="tool-card">
-            <h2>📏 Unit Converter</h2>
+            <h2>📏 Unit Converter <span class="working-badge">WORKING</span></h2>
             <input type="number" id="unitValue" placeholder="Enter value">
             <select id="fromUnit">
-                <option value="meters">Meters</option>
-                <option value="km">Kilometers</option>
-                <option value="miles">Miles</option>
-                <option value="feet">Feet</option>
-                <option value="kg">Kilograms</option>
-                <option value="lbs">Pounds</option>
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
+                <option value="meters">Meters</option><option value="km">Kilometers</option>
+                <option value="miles">Miles</option><option value="feet">Feet</option>
+                <option value="kg">Kilograms</option><option value="lbs">Pounds</option>
+                <option value="celsius">Celsius</option><option value="fahrenheit">Fahrenheit</option>
             </select>
             <span> → </span>
             <select id="toUnit">
-                <option value="meters">Meters</option>
-                <option value="km">Kilometers</option>
-                <option value="miles">Miles</option>
-                <option value="feet">Feet</option>
-                <option value="kg">Kilograms</option>
-                <option value="lbs">Pounds</option>
-                <option value="celsius">Celsius</option>
-                <option value="fahrenheit">Fahrenheit</option>
+                <option value="meters">Meters</option><option value="km">Kilometers</option>
+                <option value="miles">Miles</option><option value="feet">Feet</option>
+                <option value="kg">Kilograms</option><option value="lbs">Pounds</option>
+                <option value="celsius">Celsius</option><option value="fahrenheit">Fahrenheit</option>
             </select>
             <button onclick="convertUnit()">Convert</button>
             <div class="result" id="unitResult">Result will appear here</div>
         </div>
 
-        <!-- 3. TIMEZONE CHECKER -->
+        <!-- TIMEZONE CHECKER -->
         <div class="tool-card">
-            <h2>🌍 Timezone Checker</h2>
+            <h2>🌍 Timezone Checker <span class="working-badge">WORKING</span></h2>
             <select id="timezone">
-                <option value="America/New_York">🇺🇸 New York (EST)</option>
-                <option value="America/Los_Angeles">🇺🇸 Los Angeles (PST)</option>
-                <option value="Europe/London">🇬🇧 London (GMT)</option>
-                <option value="Europe/Paris">🇫🇷 Paris (CET)</option>
-                <option value="Asia/Tokyo">🇯🇵 Tokyo (JST)</option>
-                <option value="Asia/Dubai">🇦🇪 Dubai (GST)</option>
-                <option value="Australia/Sydney">🇦🇺 Sydney (AEDT)</option>
-                <option value="Asia/Kolkata">🇮🇳 Mumbai (IST)</option>
-                <option value="Asia/Shanghai">🇨🇳 Shanghai (CST)</option>
-                <option value="America/Sao_Paulo">🇧🇷 São Paulo (BRT)</option>
+                <option value="America/New_York">🇺🇸 New York</option>
+                <option value="Europe/London">🇬🇧 London</option>
+                <option value="Asia/Tokyo">🇯🇵 Tokyo</option>
+                <option value="Asia/Kolkata">🇮🇳 Mumbai</option>
             </select>
             <button onclick="showTime()">Show Current Time</button>
             <div class="result" id="timeResult">Select a city and click the button</div>
         </div>
 
-        <!-- 4. PDF TO WORD -->
+        <!-- JPG TO PDF - FULLY WORKING -->
         <div class="tool-card">
-            <h2>📄 PDF to Word Converter</h2>
+            <h2>🖼️ JPG to PDF <span class="working-badge">WORKING NOW</span></h2>
+            <input type="file" id="jpgFile" accept="image/jpeg" multiple>
+            <button onclick="convertJPGtoPDF()">Convert to PDF</button>
+            <div class="result" id="jpgResult">Select one or more JPG images</div>
+        </div>
+
+        <!-- PNG TO PDF - FULLY WORKING -->
+        <div class="tool-card">
+            <h2>📷 PNG to PDF <span class="working-badge">WORKING NOW</span></h2>
+            <input type="file" id="pngFile" accept="image/png" multiple>
+            <button onclick="convertPNGtoPDF()">Convert to PDF</button>
+            <div class="result" id="pngResult">Select one or more PNG images</div>
+        </div>
+
+        <!-- PDF TO WORD - Coming Soon -->
+        <div class="tool-card">
+            <h2>📄 PDF to Word <span class="soon-badge">FREE BACKEND COMING</span></h2>
             <input type="file" id="pdfFile" accept=".pdf">
             <button onclick="convertPDFtoWord()">Convert to Word</button>
-            <div class="result" id="pdfResult">Select a PDF file and click convert</div>
+            <div class="result" id="pdfResult">Select a PDF file</div>
         </div>
 
-        <!-- 5. WORD TO PDF -->
+        <!-- WORD TO PDF - Coming Soon -->
         <div class="tool-card">
-            <h2>📝 Word to PDF Converter</h2>
+            <h2>📝 Word to PDF <span class="soon-badge">FREE BACKEND COMING</span></h2>
             <input type="file" id="wordFile" accept=".docx">
             <button onclick="convertWordToPDF()">Convert to PDF</button>
-            <div class="result" id="wordResult">Select a Word file and click convert</div>
+            <div class="result" id="wordResult">Select a Word file</div>
         </div>
 
-        <!-- 6. EXCEL TO PDF -->
+        <!-- EXCEL TO PDF - Coming Soon -->
         <div class="tool-card">
-            <h2>📊 Excel to PDF Converter</h2>
+            <h2>📊 Excel to PDF <span class="soon-badge">FREE BACKEND COMING</span></h2>
             <input type="file" id="excelFile" accept=".xlsx">
             <button onclick="convertExcelToPDF()">Convert to PDF</button>
-            <div class="result" id="excelResult">Select an Excel file and click convert</div>
-        </div>
-
-        <!-- 7. JPG TO PDF -->
-        <div class="tool-card">
-            <h2>🖼️ JPG to PDF Converter</h2>
-            <input type="file" id="jpgFile" accept="image/jpeg">
-            <button onclick="convertJPGtoPDF()">Convert to PDF</button>
-            <div class="result" id="jpgResult">Select a JPG image and click convert</div>
-        </div>
-
-        <!-- 8. PNG TO PDF -->
-        <div class="tool-card">
-            <h2>📷 PNG to PDF Converter</h2>
-            <input type="file" id="pngFile" accept="image/png">
-            <button onclick="convertPNGtoPDF()">Convert to PDF</button>
-            <div class="result" id="pngResult">Select a PNG image and click convert</div>
+            <div class="result" id="excelResult">Select an Excel file</div>
         </div>
     </div>
-
-    <footer>
-        Made by Hash | 100% Free Tools | No Registration | No Email Required
-    </footer>
+    <footer>Made by Hash | JPG/PNG to PDF works in your browser | Word/Excel/PDF backend coming soon (still free)</footer>
 </div>
 
 <script>
-    // 1. CALCULATOR FUNCTION
+    // Calculator
     function calculate() {
         let num1 = parseFloat(document.getElementById('num1').value);
         let num2 = parseFloat(document.getElementById('num2').value);
         let operation = document.getElementById('operation').value;
         let result;
-        
         if (isNaN(num1) || isNaN(num2)) {
-            result = "⚠️ Please enter valid numbers in both fields";
+            result = "⚠️ Please enter valid numbers";
         } else {
             switch(operation) {
                 case 'add': result = num1 + num2; break;
@@ -280,114 +204,129 @@
         document.getElementById('calcResult').innerHTML = "✅ Result: " + result;
     }
 
-    // 2. UNIT CONVERTER FUNCTION
+    // Unit Converter
     function convertUnit() {
         let value = parseFloat(document.getElementById('unitValue').value);
         let from = document.getElementById('fromUnit').value;
         let to = document.getElementById('toUnit').value;
-        
         if (isNaN(value)) {
             document.getElementById('unitResult').innerHTML = "⚠️ Please enter a valid number";
             return;
         }
-        
-        // Conversion rates to base units
-        const toMeters = {
-            meters: 1, km: 1000, miles: 1609.34, feet: 0.3048,
-            kg: 1, lbs: 0.453592,
-            celsius: 1, fahrenheit: 1
-        };
-        
-        const fromMeters = {
-            meters: 1, km: 0.001, miles: 0.000621371, feet: 3.28084,
-            kg: 1, lbs: 2.20462,
-            celsius: 1, fahrenheit: 1
-        };
-        
+        const toMeters = { meters: 1, km: 1000, miles: 1609.34, feet: 0.3048, kg: 1, lbs: 0.453592, celsius: 1, fahrenheit: 1 };
+        const fromMeters = { meters: 1, km: 0.001, miles: 0.000621371, feet: 3.28084, kg: 1, lbs: 2.20462, celsius: 1, fahrenheit: 1 };
         let result;
-        // Temperature special case
-        if (from === 'celsius' && to === 'fahrenheit') {
-            result = (value * 9/5) + 32;
-        } else if (from === 'fahrenheit' && to === 'celsius') {
-            result = (value - 32) * 5/9;
-        } else if ((from === 'celsius' || from === 'fahrenheit') && (to === 'celsius' || to === 'fahrenheit')) {
-            result = value;
-        } else {
-            result = value * (toMeters[from] || 1) * (fromMeters[to] || 1);
-        }
-        
+        if (from === 'celsius' && to === 'fahrenheit') result = (value * 9/5) + 32;
+        else if (from === 'fahrenheit' && to === 'celsius') result = (value - 32) * 5/9;
+        else if ((from === 'celsius' || from === 'fahrenheit') && (to === 'celsius' || to === 'fahrenheit')) result = value;
+        else result = value * (toMeters[from] || 1) * (fromMeters[to] || 1);
         document.getElementById('unitResult').innerHTML = `${value} ${from} = ${result.toFixed(4)} ${to}`;
     }
 
-    // 3. TIMEZONE FUNCTION
+    // Timezone
     function showTime() {
         let timezone = document.getElementById('timezone').value;
         let now = new Date();
-        let options = {
-            timeZone: timezone,
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            weekday: 'long'
-        };
+        let options = { timeZone: timezone, hour: '2-digit', minute: '2-digit', second: '2-digit', year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
         let formatter = new Intl.DateTimeFormat('en-US', options);
         let time = formatter.format(now);
         let cityName = document.getElementById('timezone').options[document.getElementById('timezone').selectedIndex].text;
         document.getElementById('timeResult').innerHTML = `<strong>${cityName}</strong><br>📅 ${time}`;
     }
 
-    // 4. PDF TO WORD
+    // FULLY WORKING JPG TO PDF
+    async function convertJPGtoPDF() {
+        const files = document.getElementById('jpgFile').files;
+        if (files.length === 0) {
+            document.getElementById('jpgResult').innerHTML = "⚠️ Please select one or more JPG images";
+            return;
+        }
+        document.getElementById('jpgResult').innerHTML = "🔄 Converting... Please wait";
+        
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+        let pageAdded = false;
+        
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const reader = new FileReader();
+            await new Promise((resolve) => {
+                reader.onload = function(e) {
+                    const imgData = e.target.result;
+                    const img = new Image();
+                    img.onload = function() {
+                        if (pageAdded) pdf.addPage();
+                        const imgWidth = pdf.internal.pageSize.getWidth();
+                        const imgHeight = (this.height * imgWidth) / this.width;
+                        pdf.addImage(imgData, 'JPEG', 0, 0, imgWidth, imgHeight);
+                        pageAdded = true;
+                        resolve();
+                    };
+                    img.src = imgData;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+        pdf.save('converted-images.pdf');
+        document.getElementById('jpgResult').innerHTML = `✅ Success! Converted ${files.length} image(s). PDF downloaded.`;
+    }
+
+    // FULLY WORKING PNG TO PDF
+    async function convertPNGtoPDF() {
+        const files = document.getElementById('pngFile').files;
+        if (files.length === 0) {
+            document.getElementById('pngResult').innerHTML = "⚠️ Please select one or more PNG images";
+            return;
+        }
+        document.getElementById('pngResult').innerHTML = "🔄 Converting... Please wait";
+        
+        const { jsPDF } = window.jspdf;
+        const pdf = new jsPDF();
+        let pageAdded = false;
+        
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const reader = new FileReader();
+            await new Promise((resolve) => {
+                reader.onload = function(e) {
+                    const imgData = e.target.result;
+                    const img = new Image();
+                    img.onload = function() {
+                        if (pageAdded) pdf.addPage();
+                        const imgWidth = pdf.internal.pageSize.getWidth();
+                        const imgHeight = (this.height * imgWidth) / this.width;
+                        pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+                        pageAdded = true;
+                        resolve();
+                    };
+                    img.src = imgData;
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+        pdf.save('converted-images.pdf');
+        document.getElementById('pngResult').innerHTML = `✅ Success! Converted ${files.length} image(s). PDF downloaded.`;
+    }
+
+    // Coming soon functions
     function convertPDFtoWord() {
         let file = document.getElementById('pdfFile').files[0];
-        if (!file) {
-            document.getElementById('pdfResult').innerHTML = "⚠️ Please select a PDF file first";
-            return;
-        }
-        document.getElementById('pdfResult').innerHTML = `✅ "${file.name}" - Ready to convert. Full backend coming soon.`;
+        if (!file) { document.getElementById('pdfResult').innerHTML = "⚠️ Please select a PDF file"; return; }
+        document.getElementById('pdfResult').innerHTML = `✅ "${file.name}" selected. Word/PDF backend coming in 2-3 days (still free).`;
     }
-
-    // 5. WORD TO PDF
     function convertWordToPDF() {
         let file = document.getElementById('wordFile').files[0];
-        if (!file) {
-            document.getElementById('wordResult').innerHTML = "⚠️ Please select a Word file first";
-            return;
-        }
-        document.getElementById('wordResult').innerHTML = `✅ "${file.name}" - Ready to convert. Full backend coming soon.`;
+        if (!file) { document.getElementById('wordResult').innerHTML = "⚠️ Please select a Word file"; return; }
+        document.getElementById('wordResult').innerHTML = `✅ "${file.name}" selected. Word/PDF backend coming in 2-3 days (still free).`;
     }
-
-    // 6. EXCEL TO PDF
     function convertExcelToPDF() {
         let file = document.getElementById('excelFile').files[0];
-        if (!file) {
-            document.getElementById('excelResult').innerHTML = "⚠️ Please select an Excel file first";
-            return;
-        }
-        document.getElementById('excelResult').innerHTML = `✅ "${file.name}" - Ready to convert. Full backend coming soon.`;
-    }
-
-    // 7. JPG TO PDF
-    function convertJPGtoPDF() {
-        let file = document.getElementById('jpgFile').files[0];
-        if (!file) {
-            document.getElementById('jpgResult').innerHTML = "⚠️ Please select a JPG image first";
-            return;
-        }
-        document.getElementById('jpgResult').innerHTML = `✅ "${file.name}" - Ready to convert. Full backend coming soon.`;
-    }
-
-    // 8. PNG TO PDF
-    function convertPNGtoPDF() {
-        let file = document.getElementById('pngFile').files[0];
-        if (!file) {
-            document.getElementById('pngResult').innerHTML = "⚠️ Please select a PNG image first";
-            return;
-        }
-        document.getElementById('pngResult').innerHTML = `✅ "${file.name}" - Ready to convert. Full backend coming soon.`;
+        if (!file) { document.getElementById('excelResult').innerHTML = "⚠️ Please select an Excel file"; return; }
+        document.getElementById('excelResult').innerHTML = `✅ "${file.name}" selected. Excel/PDF backend coming in 2-3 days (still free).`;
     }
 </script>
+
+<!-- jsPDF library for PDF creation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </body>
 </html>
